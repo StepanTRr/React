@@ -3,7 +3,7 @@ const Header = () => {
     return (
         <div>
             <header className={styles.header}>Hello</header>
-            <p>tttttttttttttttttt</p>
+            <p className={styles.p}>tttttttttttttttttt</p>
         </div>
     );
 }
