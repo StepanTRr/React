@@ -1,11 +1,55 @@
 .header {
-    background-color: rgb(44, 44, 44);
-    height: 10vh;
+    background-color: rgb(223, 246, 255);
+    height: 15vh;
 }
 .p {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 34px;
-    color: rgb(242, 246, 246);
+    color: rgb(0, 0, 0);
     padding-top: 30px;
     justify-content: center;
+    &__top {
+        font-size: 22px;
+        font-family: 'Times New Roman', Times, serif;
+        padding-top: 5px;
+    }
+    &__number {
+        font-size: 20px;
+        font-family: 'Courier New', Courier, monospace;
+        padding-right: 40px;
+    }
+    &__time {
+        font-size: 14px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: rgb(49, 49, 49);
+    }
+}
+.top_line {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.main_line{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 30px;
+    padding-left: 60px; padding-right: 60px;
+}
+.down_line {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 10px;  padding-left: 60px; padding-right: 60px;
+}
+.right_main {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.h2_name {
+    font-size: 38px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }

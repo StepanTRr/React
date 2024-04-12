@@ -4,7 +4,7 @@ import styles from './ProductList.module.scss';
 const ProductList = () => {
     return(
         <>
-            <h2 className={styles.h2_name}>List</h2>
+            <h2 className={styles.h2_name}>Новинки</h2>
         <div className={styles.div_list}>
             {data.map((item, index) => (
                 <div key = {index}>

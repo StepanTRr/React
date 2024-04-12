@@ -1,11 +1,11 @@
 
 .p_def {
-    color: aliceblue;
+    color: rgb(0, 0, 0);
     font-size: 32px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 10px;
     &__main {
-        color: rgb(222, 240, 255);
+        color: rgb(12, 27, 39);
         font-size: 42px;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         margin: 10px;
@@ -13,7 +13,7 @@
 }
 .div_card {
     margin: 7px;
-    border: 3px solid white;
+    border: 3px solid rgb(17, 25, 29);
     border-radius: 1px;
     width: 400px; height: 300px;
 }
