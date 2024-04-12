@@ -2,8 +2,7 @@ import styles from './Header.module.scss';
 const Header = () => {
     return (
         <div>
-            <header className={styles.header}>Hello</header>
-            <p className={styles.p}>tttttttttttttttttt</p>
+            <header className={styles.header}><p className={styles.p}>My project React</p></header>
         </div>
     );
 }
