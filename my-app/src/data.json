@@ -4,27 +4,62 @@
     "discounted": "false",
     "id": 0,
     "Like": false,
-    "image": "лак1.png"
+    "image": "https://avatars.mds.yandex.net/get-mpic/11379035/2a0000018cf83a46dabe009e5ae3461714dc/orig"
 },
 {
     "title": "Product 2",
     "price": 1409,
     "discounted": "true",
     "id": 1,
-    "Like": false
+    "Like": false,
+    "image": "https://basket-01.wbbasket.ru/vol80/part8099/8099817/images/big/1.jpg"
 },
 {
     "title": "Product 3",
     "price": 140,
     "discounted": "true",
     "id": 2,
-    "Like": false
+    "Like": false,
+    "image": "https://avatars.mds.yandex.net/get-mpic/11379035/2a0000018cf83a46dabe009e5ae3461714dc/orig"
 },
 {
     "title": "Product 4",
     "price": 143,
     "discounted": "true",
     "id": 3,
-    "Like": false
+    "Like": false,
+    "image": "https://avatars.mds.yandex.net/get-mpic/11379035/2a0000018cf83a46dabe009e5ae3461714dc/orig"
+},
+{
+    "title": "Product 4",
+    "price": 143,
+    "discounted": "true",
+    "id": 4,
+    "Like": false,
+    "image": "https://avatars.mds.yandex.net/get-mpic/11379035/2a0000018cf83a46dabe009e5ae3461714dc/orig"
+},
+{
+    "title": "Product 4",
+    "price": 143,
+    "discounted": "true",
+    "id": 5,
+    "Like": false,
+    "image": "https://avatars.mds.yandex.net/get-mpic/11379035/2a0000018cf83a46dabe009e5ae3461714dc/orig"
+},
+{
+    "title": "Product 4",
+    "price": 143,
+    "discounted": "true",
+    "id": 6,
+    "Like": false,
+    "image": "https://avatars.mds.yandex.net/get-mpic/11379035/2a0000018cf83a46dabe009e5ae3461714dc/orig"
+},
+{
+    "title": "Product 4",
+    "price": 143,
+    "discounted": "true",
+    "id": 7,
+    "Like": false,
+    "image": "https://avatars.mds.yandex.net/get-mpic/11379035/2a0000018cf83a46dabe009e5ae3461714dc/orig"
 }
 ]
