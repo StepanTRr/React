@@ -11,7 +11,7 @@ const Header = () => {
                 <p className={styles.p__top}>Акции</p>
             </div>
             <div className={styles.main_line}>
-                <h2 className={styles.h2_name}>NOGTISHOP</h2>
+                <h2 className={styles.h2_name}>NAMESITE</h2>
                 <div className={styles.right_main}>
                     <div>
                         <p className={styles.p__number}>8 800 999 99 99</p>
@@ -24,9 +24,6 @@ const Header = () => {
                 </div>
             </div>
             <div className={styles.down_line}>
-                <div>
-                    <img src="" alt="Иконка" />
-                </div>
             </div>
         </div>
     );

@@ -1,21 +1,29 @@
 [{
     "title": "Product 1",
     "price": 149,
-    "discounted": "false"
+    "discounted": "false",
+    "id": 0,
+    "Like": false
 },
 {
     "title": "Product 2",
     "price": 1409,
-    "discounted": "true"
+    "discounted": "true",
+    "id": 1,
+    "Like": false
 },
 {
     "title": "Product 3",
     "price": 140,
-    "discounted": "true"
+    "discounted": "true",
+    "id": 2,
+    "Like": false
 },
 {
     "title": "Product 4",
     "price": 143,
-    "discounted": "true"
+    "discounted": "true",
+    "id": 3,
+    "Like": false
 }
 ]
