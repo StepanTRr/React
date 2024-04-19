@@ -3,7 +3,8 @@
     "price": 149,
     "discounted": "false",
     "id": 0,
-    "Like": false
+    "Like": false,
+    "image": "лак1.png"
 },
 {
     "title": "Product 2",
