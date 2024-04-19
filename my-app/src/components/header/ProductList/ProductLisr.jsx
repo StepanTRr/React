@@ -34,7 +34,7 @@ const ProductList = () => {
 
     return(
         <>
-            <h2 className={styles.h2_name}>Новинки</h2>
+          <div className={styles.div_names}>  <h2 className={styles.h2_name}>Новинки</h2><img src='https://kartinki.pics/uploads/posts/2022-12/thumbs/1671761581_kartinkin-net-p-ogonek-kartinki-instagram-1.png' className={styles.img}></img> </div>
         <div className={styles.div_list}>
             {products.slice(0, visibleCount).map((item, index) => (
                 <div key = {index}>
@@ -48,7 +48,7 @@ const ProductList = () => {
             <button onClick={showMore} className={styles.button_add}>Еще</button>
         )}
         </div>
-        <h2 className={styles.h2_name}>Понравившееся</h2>
+        <div className={styles.div_names}><h2 className={styles.h2_name}>Понравившееся</h2><img src="https://www.iconpacks.net/icons/2/free-instagram-like-icon-3507-thumb.png" alt="" className={styles.img}/></div>
         <div className={styles.div_list_like}>
             {likedProducts.map((item, index) => (
                 <div key = {index}>
