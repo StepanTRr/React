@@ -24,6 +24,10 @@ const Header = () => {
                 </div>
             </div>
             <div className={styles.down_line}>
+                <a href="/">HOME</a>
+                <a href="/ProductList">MAIN</a>
+                <a href="/about">ABOUT</a>
+                <a href="/api">API</a>
             </div>
         </div>
     );

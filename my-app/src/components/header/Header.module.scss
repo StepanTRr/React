@@ -43,6 +43,10 @@
     flex-wrap: wrap;
     flex-direction: row;
     padding: 10px;  padding-left: 60px; padding-right: 60px;
+    justify-content: space-evenly;
+    color: black;
+    font-size: 24px;
+    font-family: 'Courier New', Courier, monospace;
 }
 .right_main {
     display: flex;
