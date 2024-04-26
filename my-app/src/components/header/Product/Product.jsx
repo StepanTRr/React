@@ -1,6 +1,7 @@
 import styles from './Product.module.scss';
 
 const Product = (props) => {
+    
     const{product, deleteProduct, likeProduct} = props;
     const Delete = () => {
         deleteProduct(product.id);
