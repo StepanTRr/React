@@ -1,5 +1,7 @@
+import { useNavigate } from 'react-router';
 import styles from './Header.module.scss';
 const Header = () => {
+    const navigate = useNavigate();
     return (
         <div className= {styles.header}>
             <div className={styles.top_line}>
@@ -24,10 +26,10 @@ const Header = () => {
                 </div>
             </div>
             <div className={styles.down_line}>
-                <a href="/">HOME</a>
-                <a href="/ProductList">MAIN</a>
-                <a href="/about">ABOUT</a>
-                <a href="/api">API</a>
+                <img src="https://cdn-icons-png.flaticon.com/512/25/25694.png" alt="home" className={styles.img} onClick={() => {navigate('/', {replace: false})}}/>
+                <img src="https://uxwing.com/wp-content/themes/uxwing/download/logistics-shipping-delivery/search-product-icon.png" alt="products" className={styles.img} onClick={() => {navigate('/ProductList', {replace: false})}}/>
+                <img src="https://cdn-icons-png.flaticon.com/512/157/157933.png" alt="about" className={styles.img} onClick={() => {navigate('/about', {replace: false})}}/>
+                <img src="https://uxwing.com/wp-content/themes/uxwing/download/web-app-development/api-icon.png" alt="api" className={styles.img} onClick={() => {navigate('/api', {replace: false})}}/>
             </div>
         </div>
     );

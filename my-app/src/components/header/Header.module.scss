@@ -1,6 +1,6 @@
 .header {
     background-color: rgb(223, 246, 255);
-    height: 15vh;
+    height: 17vh;
 }
 .p {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -43,10 +43,11 @@
     flex-wrap: wrap;
     flex-direction: row;
     padding: 10px;  padding-left: 60px; padding-right: 60px;
-    justify-content: space-evenly;
     color: black;
     font-size: 24px;
     font-family: 'Courier New', Courier, monospace;
+    justify-content:flex-start;
+    margin: 0 5px;
 }
 .right_main {
     display: flex;
@@ -56,4 +57,13 @@
 .h2_name {
     font-size: 38px;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.img {
+    width: 32px;
+    height: 32px;
+    margin: 0 7px;
+    transition: transform 0.3s ease-in-out;
+}
+.img:hover {
+    transform: scale(1.1);
 }
