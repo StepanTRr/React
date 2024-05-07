@@ -10,6 +10,7 @@ import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
+import TextField from '@mui/material/TextField';
 
 const API = () => {
     const[products, setProducts] = useState([]);
@@ -38,6 +39,9 @@ const API = () => {
     const ShowMore = () => {setVisibleApi(visibleApi => visibleApi + 9)}
 
     const [isLoading, setIsLoading] = useState(true);
+    const[textFilter, settextFilter] = useState('');
+    const[filterProduct, setfilterProduct] = useState([]);
+
 
   useEffect(() => {
     setTimeout(() => {
@@ -50,9 +54,19 @@ const API = () => {
             });
     }, 2000);
   }, []);
+
+  useEffect(() => {
+    const tmp = products.filter(item => {
+        item.title.includes(textFilter);
+    })
+    console.log(tmp);
+    setfilterProduct(tmp);
+  }, [textFilter])
     return <div className={styles_api.main}>
         {isLoading ? (<div className={styles_api.divLoad}><Loading /></div>) : (
         <div className={styles_api.main}>
+           <TextField id="filled-basic" label="Filled" variant="filled" onChange={(e) => settextFilter(e.target.value)}/>
+           
         <h1>API</h1><div className={styles_api.div_list}>
                 {products.slice(0, visibleApi).map((item, index) => (
                     <Card key={index} sx={{height: 650}}>
