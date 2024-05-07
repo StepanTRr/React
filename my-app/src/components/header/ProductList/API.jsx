@@ -12,7 +12,6 @@ const API = () => {
     const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Simulate loading for 2 seconds
     setTimeout(() => {
         fetch('https://api.escuelajs.co/api/v1/products')
             .then((response) => response.json())
