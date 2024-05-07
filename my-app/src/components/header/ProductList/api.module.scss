@@ -26,10 +26,11 @@
 }
 .div_card {
     margin: 7px;
-    width: 500px; height: 530px;transition: transform 0.3s ease-in-out;
+    width: 500px; height: 530px;;
+    padding: 10px;
 }
 .div_card:hover {
-    transform: scale(1.02);
+    
 
 }
 .image {
@@ -49,6 +50,8 @@
     flex-wrap: wrap;
     justify-content: space-around;
     height: max-content;
+    margin: 10px;
+    padding-top: 20px;
 }
 .h2_name {
     color: rgb(0, 0, 0);
