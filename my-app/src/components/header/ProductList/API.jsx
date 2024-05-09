@@ -56,20 +56,22 @@ const API = () => {
   }, []);
 
   useEffect(() => {
-    
-    const tmp = products.filter(item => {
-        item.title.includes(textFilter);
-    })
+    const tmp = products.filter(item => item.title.includes(textFilter));
     console.log(tmp);
     setfilterProduct(tmp);
-  }, [textFilter])
+  }, [textFilter, products]); 
+  
     return <div className={styles_api.main}>
         {isLoading ? (<div className={styles_api.divLoad}><Loading /></div>) : (
         <div className={styles_api.main}>
-           <TextField id="filled-basic" label="Filled" variant="filled" onChange={(e) => settextFilter(e.target.value)}/>
            
-        <h1>API</h1><div className={styles_api.div_list}>
-                {products.slice(0, visibleApi).map((item, index) => (
+           <h1>API</h1>  
+        <div className={styles.div_wt_filter}>
+          <div><h2>Filter: </h2></div>
+          <div><TextField id="filled-basic" label="Filled" variant="filled" onChange={(e) => settextFilter(e.target.value)}/></div>
+        </div>
+        <div className={styles_api.div_list}>
+                {filterProduct.slice(0, visibleApi).map((item, index) => (
                     <Card key={index} sx={{height: 650}}>
                         <CardContent>
                             <Product_API product={item}></Product_API>
@@ -81,7 +83,7 @@ const API = () => {
                     </Card>
                 ))}
             </div><div className={styles_api.div_btn}>
-                    {visibleApi < products.length && (
+                    {visibleApi < filterProduct.length && (
                         <Button onClick={ShowMore} variant="contained" className={styles_api.button_add}>Еще</Button>
                     )}
                 </div>
