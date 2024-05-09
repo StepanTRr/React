@@ -56,6 +56,7 @@ const API = () => {
   }, []);
 
   useEffect(() => {
+    
     const tmp = products.filter(item => {
         item.title.includes(textFilter);
     })
@@ -71,7 +72,6 @@ const API = () => {
                 {products.slice(0, visibleApi).map((item, index) => (
                     <Card key={index} sx={{height: 650}}>
                         <CardContent>
-
                             <Product_API product={item}></Product_API>
                         </CardContent>
                         <CardActions >
