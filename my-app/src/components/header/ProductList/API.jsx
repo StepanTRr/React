@@ -37,11 +37,14 @@ const API = () => {
       const handleClose = () => {
         setOpen(false);
       };      
-    const ShowMore = () => {setVisibleApi(visibleApi => visibleApi + 9)}
+    const ShowMore = () => {setVisibleApi(visibleApi => visibleApi + 6)}
 
     const [isLoading, setIsLoading] = useState(true);
     const[textFilter, settextFilter] = useState('');
     const[filterProduct, setfilterProduct] = useState([]);
+    const[backCol, setbackCol] = useState('');
+    const [listCol, setListCol]=useState([]);
+
 
     const MyButton = styled(Button)({
       margin: '30px',
@@ -49,6 +52,7 @@ const API = () => {
       height: '50px',
     });
     const MyCard = styled(Card)({
+      width: '400px',
       margin: '20px',
       border: '1px solid rgb(71, 71, 71);',
       '&:hover': {
@@ -57,8 +61,30 @@ const API = () => {
         borderColor: '#ADD8E6',
         boxShadow: 'none',
       },
+      backgroundColor: backCol,
     });
-
+    const changeBackground = (index) => {
+      const randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+      setbackCol(randomColor);
+      const found = listCol.find((item) => {
+        if (item === index){
+          console.log('item: ' + item);
+          return true;
+        }
+        return false;
+      });
+      
+        
+      if (!found)
+        {
+          console.log('ddd')
+        const t=[...listCol, index];
+        console.log(t);
+        setListCol(t);
+        }
+      
+      
+    };
 
   useEffect(() => {
     setTimeout(() => {
@@ -74,10 +100,10 @@ const API = () => {
 
   useEffect(() => {
     const tmp = products.filter(item => item.title.includes(textFilter));
-    console.log(tmp);
+   // console.log(tmp);
     setfilterProduct(tmp);
   }, [textFilter, products]); 
-  
+
     return <div className={styles_api.main}>
         {isLoading ? (<div className={styles_api.divLoad}><Loading /></div>) : (
         <div className={styles_api.main}>
@@ -94,7 +120,7 @@ const API = () => {
                         </CardContent>
                         <CardActions >
                             <Button variant="contained" onClick={() => {setTextModal(item.description); handleOpen();}}>View</Button>
-                            
+                            <Button variant="contained" onClick={() => { changeBackground(index); }}>Click me!</Button>
                         </CardActions>
                     </MyCard>
                 ))}
