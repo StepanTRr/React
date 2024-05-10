@@ -11,6 +11,7 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
 import TextField from '@mui/material/TextField';
+import { styled } from '@mui/material/styles';
 
 const API = () => {
     const[products, setProducts] = useState([]);
@@ -42,6 +43,22 @@ const API = () => {
     const[textFilter, settextFilter] = useState('');
     const[filterProduct, setfilterProduct] = useState([]);
 
+    const MyButton = styled(Button)({
+      margin: '30px',
+      width: '20%',
+      height: '50px',
+    });
+    const MyCard = styled(Card)({
+      margin: '20px',
+      border: '1px solid rgb(71, 71, 71);',
+      '&:hover': {
+        border: '2px solid',
+        backgroundColor: '#DCDCDC',
+        borderColor: '#ADD8E6',
+        boxShadow: 'none',
+      },
+    });
+
 
   useEffect(() => {
     setTimeout(() => {
@@ -67,12 +84,11 @@ const API = () => {
            
            <h1>API</h1>  
         <div className={styles.div_wt_filter}>
-          <div><h2>Filter: </h2></div>
-          <div><TextField id="filled-basic" label="Filled" variant="filled" onChange={(e) => settextFilter(e.target.value)}/></div>
+          <div><TextField id="filled-basic" label="Filter" variant="filled" onChange={(e) => settextFilter(e.target.value)}/></div>
         </div>
         <div className={styles_api.div_list}>
                 {filterProduct.slice(0, visibleApi).map((item, index) => (
-                    <Card key={index} sx={{height: 650}}>
+                    <MyCard key={index} sx={{height: 650}}>
                         <CardContent>
                             <Product_API product={item}></Product_API>
                         </CardContent>
@@ -80,11 +96,11 @@ const API = () => {
                             <Button variant="contained" onClick={() => {setTextModal(item.description); handleOpen();}}>View</Button>
                             
                         </CardActions>
-                    </Card>
+                    </MyCard>
                 ))}
             </div><div className={styles_api.div_btn}>
                     {visibleApi < filterProduct.length && (
-                        <Button onClick={ShowMore} variant="contained" className={styles_api.button_add}>Еще</Button>
+                        <MyButton onClick={ShowMore} variant="contained">Еще</MyButton>
                     )}
                 </div>
         </div>
