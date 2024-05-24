@@ -51,7 +51,7 @@ const API = () => {
     const[filterProduct, setfilterProduct] = useState([]);
     const[backCol, setbackCol] = useState('');
     const [listCol, setListCol]=useState([]);
-    const[categories, setCaregories] = useState([]);
+    const[categories, setCategories] = useState([]);
 
 
     const MyButton = styled(Button)({
@@ -111,11 +111,18 @@ const API = () => {
             .then((json) => {
                 console.log(json);
                 setProducts(json);
-                const extractedCategories = json
-                .map(product => product.category) 
-                .filter((category, index, array) => array.indexOf(category) === index)
-                .map(categoryName => ({ id: categoryName, name: categoryName }));
-                setCaregories(extractedCategories);
+                //const extractedCategories = json
+                //.map(product => product.category);
+                //setCategories(extractedCategories);
+                //const uniqueCategories = [...new Set(extractedCategories)];
+                //const filterCat = extractedCategories.filter((value, index, array) => array.indexOf(value) === index);
+                //const uniqueCategoriesArray = Array.from(uniqueCategories);
+                const extractedCategories = json.map(product => product.category);
+                setCategories(prevCategories => {
+                    const newCategories = extractedCategories.filter((value, index, array) => array.indexOf(value) === index);
+                    return [...new Set([...prevCategories, ...newCategories])];
+                });
+                //setCategories(filterCat);
                 setIsLoading(false);
             });
     }, 2000);
@@ -140,6 +147,7 @@ const API = () => {
         </div>
     <div>
     {categories.map((category) => (
+        
     <Accordion key={category.id}>
         <AccordionSummary>
       <Typography>{category.name}</Typography> 
