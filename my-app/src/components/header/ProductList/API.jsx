@@ -109,7 +109,7 @@ const API = () => {
         fetch('https://api.escuelajs.co/api/v1/products')
             .then((response) => response.json())
             .then((json) => {
-                console.log(json);
+                //console.log(json);
                 setProducts(json);
                 //const extractedCategories = json
                 //.map(product => product.category);
@@ -117,11 +117,11 @@ const API = () => {
                 //const uniqueCategories = [...new Set(extractedCategories)];
                 //const filterCat = extractedCategories.filter((value, index, array) => array.indexOf(value) === index);
                 //const uniqueCategoriesArray = Array.from(uniqueCategories);
-                const extractedCategories = json.map(product => product.category);
-                setCategories(prevCategories => {
-                    const newCategories = extractedCategories.filter((value, index, array) => array.indexOf(value) === index);
-                    return [...new Set([...prevCategories, ...newCategories])];
-                });
+                const extractedCategories = json.map(product => product.category.name);
+                const uniqueCategories = [...new Set(extractedCategories)];
+                console.log("uniqueCategories");
+                console.log(uniqueCategories);
+                setCategories(uniqueCategories);
                 //setCategories(filterCat);
                 setIsLoading(false);
             });
@@ -150,7 +150,7 @@ const API = () => {
         
     <Accordion key={category.id}>
         <AccordionSummary>
-      <Typography>{category.name}</Typography> 
+      <Typography>{category}</Typography> 
          </AccordionSummary>
         <AccordionDetails>
         </AccordionDetails>
